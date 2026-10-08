@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReviewPilot — AI code review & docs for small dev teams</title>
+<meta name="description" content="ReviewPilot uses Claude to review pull requests and keep documentation in sync. Currently in private beta.">
+<style>
+  :root{--bg:#0f1115;--fg:#eceff4;--mut:#9aa4b2;--acc:#d97757;--card:#171a21}
+  *{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+  .w{max-width:960px;margin:auto;padding:0 24px}
+  header{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-weight:700;font-size:20px}.logo span{color:var(--acc)}
+  .badge{background:#2a2118;color:var(--acc);border:1px solid var(--acc);padding:2px 10px;border-radius:99px;font-size:12px}
+  .hero{padding:80px 0 50px;text-align:center}
+  h1{font-size:46px;line-height:1.15;margin:0 0 16px}
+  .hero p{color:var(--mut);font-size:19px;max-width:620px;margin:0 auto 28px}
+  a.btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:30px 0}
+  .card{background:var(--card);padding:24px;border-radius:14px;border:1px solid #262b35}
+  .card h3{margin-top:0}.card p{color:var(--mut);margin:0}
+  pre{background:var(--card);border:1px solid #262b35;padding:20px;border-radius:12px;overflow:auto;color:#c9d1d9}
+  h2{margin-top:50px}
+  .road li{margin:6px 0;color:var(--mut)}
+  footer{padding:50px 0;color:var(--mut);text-align:center;font-size:14px}
+</style>
+</head>
+<body>
+<div class="w">
+  <header><div class="logo">Review<span>Pilot</span></div><span class="badge">Private beta · in development</span></header>
+
+  <section class="hero">
+    <h1>Code review and docs that<br>keep up with your team.</h1>
+    <p>ReviewPilot is a Claude-powered agent that reviews your diffs for bugs and security risks and keeps documentation in sync with the code. Built for teams of 2–20 developers.</p>
+    <a class="btn" href="#waitlist">Join the beta waitlist</a>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h3>🔍 Diff review</h3><p>Structured feedback on bugs, risks and security issues, referencing exact files and lines.</p></div>
+    <div class="card"><h3>📝 Docs generation</h3><p>Docstrings and README sections generated from your real code, not templates.</p></div>
+    <div class="card"><h3>🔌 Git-native</h3><p>Runs from the CLI today; GitHub Action and PR comments are in active development.</p></div>
+  </section>
+
+  <h2>Try the current prototype</h2>
+<pre>pip install anthropic
+export ANTHROPIC_API_KEY=...
+python reviewpilot.py review
+python reviewpilot.py docs app/service.py</pre>
+
+  <h2>Roadmap</h2>
+  <ul class="road">
+    <li>✅ CLI prototype: diff review + docs generation (Claude API)</li>
+    <li>🔨 GitHub Action with inline PR comments (in progress)</li>
+    <li>🧪 Internal testing on open-source repos</li>
+    <li>⏳ Team dashboard, custom review rules, usage analytics</li>
+  </ul>
+
+  <h2 id="waitlist">Waitlist</h2>
+  <p style="color:var(--mut)">Contact: <a style="color:var(--acc)" href="mailto:you@yourcompany.com">you@yourcompany.com</a> (replace with your company email)</p>
+
+  <footer>© 2026 ReviewPilot. Built with Claude.</footer>
+</div>
+</body>
+</html>
